@@ -5,7 +5,9 @@ import { ArrowLeft } from 'lucide-react';
 import googleIcon from '../assets/google.png'; // Adjust path as needed
 
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://weather-bot-backend-vwea.onrender.com/api";
 
 export default function Login() {
   const navigate = useNavigate();

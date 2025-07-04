@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://weather-bot-backend-vwea.onrender.com/api";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
