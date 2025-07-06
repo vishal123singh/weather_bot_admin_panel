@@ -7,9 +7,11 @@ import { ArrowLeft } from "lucide-react";
 const API_URL =
   import.meta.env.VITE_API_URL ||
   "https://weatherbotbackend-production.up.railway.app/api";
+
 const WEATHER_API_ENDPOINT =
   import.meta.env.VITE_WEATHER_API_ENDPOINT ||
   "https://api.weatherapi.com/v1/current.json";
+
 
 export default function Settings() {
   const navigate = useNavigate();
