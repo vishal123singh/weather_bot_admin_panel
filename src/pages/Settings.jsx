@@ -23,7 +23,6 @@ export default function Settings() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    console.log("import.meta.env", import.meta.env);
     if (showModal) {
       const handleClickOutside = (e) => {
         if (modalRef.current && !modalRef.current.contains(e.target)) {
