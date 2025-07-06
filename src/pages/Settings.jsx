@@ -4,8 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
-const API_URL = import.meta.env.VITE_API_URL;
-const WEATHER_API_ENDPOINT = import.meta.env.VITE_WEATHER_API_ENDPOINT;
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://weatherbotbackend-production.up.railway.app/api";
+const WEATHER_API_ENDPOINT =
+  import.meta.env.VITE_WEATHER_API_ENDPOINT ||
+  "https://api.weatherapi.com/v1/current.json";
 
 export default function Settings() {
   const navigate = useNavigate();
@@ -19,6 +23,7 @@ export default function Settings() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
+    console.log("import.meta.env", import.meta.env);
     if (showModal) {
       const handleClickOutside = (e) => {
         if (modalRef.current && !modalRef.current.contains(e.target)) {

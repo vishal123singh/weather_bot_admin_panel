@@ -5,8 +5,10 @@ import toast from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-const API_URL = import.meta.env.VITE_API_URL;
-
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://weatherbotbackend-production.up.railway.app/api";
+  
 export default function Users() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
